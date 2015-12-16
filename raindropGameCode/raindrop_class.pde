@@ -27,10 +27,10 @@ class Raindrop {    //establish the class
   }
 
   
-boolean isInContactWith(PVector c) {     //create the function to reset if the mouse comes in contact
-    float d =dist(loc.x, loc.y, c.x, c.y);
+boolean isInContactWith(Bucket b) {     //create the function to reset if the mouse comes in contact
     boolean e;
-    if (d < diam/2){
+    if(loc.dist(b.loc) < diam/2 + b.diam/2){
+ 
       e = true;
   } else {
   e = false;

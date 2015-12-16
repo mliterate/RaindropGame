@@ -16,6 +16,8 @@ class Bucket {
     fill(random(100), random(20), 0);
     ellipse(loc.x, loc.y, diam, diam);
   }
-
+  
+  
+ 
  
 }
