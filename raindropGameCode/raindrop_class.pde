@@ -6,8 +6,8 @@ class Raindrop {
   Raindrop(float x, float y) {
 
     loc = new PVector(x, y);
-    vel = new PVector(random(-4, 4), random(-4, 4));
-    acc = new PVector(0, .2);
+    vel = new PVector(0, random(-4, 4));
+    acc = new PVector(0, .04);
     diam =20;
   }
   void display() {
@@ -22,8 +22,8 @@ class Raindrop {
   }
 
   void reset() {
-    loc.y = 0;
-    vel.set(0, 10);
+    loc.y = random(-height,0);
+    vel.set(0, random(-4,4));
   }
 
   
