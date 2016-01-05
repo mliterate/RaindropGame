@@ -2,21 +2,21 @@ class Raindrop {    //establish the class
 
   PVector loc, vel, acc;   //initialize loc, vel, acc
   float diam;    //initialize diameter
-PImage apple4;
+PImage apple4;  //declare the image
   Raindrop(float x, float y) {    //create the constructer
 
-    loc = new PVector(x, y);
+    loc = new PVector(x, y);     //initialize the variables
     vel = new PVector(0, random(-4, 4));
     acc = new PVector(0, .04);
     diam =20;
-  apple4 =loadImage("apple4.png");
+  apple4 =loadImage("apple4.png");   //load the images
 }
   void display() {     //create the method to display
-    fill(255, 0, 0);
-    noStroke();
-    ellipse(loc.x, loc.y, diam, diam);
+    fill(255, 0, 0);   //set fill
+    noStroke();   //no stroke
+    ellipse(loc.x, loc.y, diam, diam);   //display the ellipse
 
-image(apple4,loc.x,loc.y,30,30);
+image(apple4,loc.x,loc.y,30,30);   //display the image
 }
 
   void fall () {     //create the method to fall
